@@ -1,0 +1,48 @@
+
+                    <!--<div style="background-color:#CCC;">
+                        <ul class="container" style="padding:10px;list-style-type:none;margin-bottom:0px;background-color:#CCC;postion:absolute;">
+                           <?php foreach ($blog as $blogs) : ?>
+                           <li style="color:black;margin-right:10px;position:relative;float:left;"><?php echo $this->escapeHtml($blogs->artist);?></li>
+                           <?php endforeach; ?>
+                        </ul>
+                    </div>-->
+ <div style="background-color: #f3f3f3;">            
+<div class="container">
+<!-- left block -->
+<div class="col-md-8" style="height:600px;padding:10px;">
+<div style="font-weight: bold;padding:10px;border-bottom:solid 1px black;">
+<spam>最近更新</spam>
+</div>
+<!-- display latest update -->
+
+<!--<div style="float:left;border-bottom:dotted 1px grey;margin-bottom:10px;padding:10px;">
+<div class="col-md-2"><img src="<?php echo $this->basePath()?>/images/wangwei.jpg"></div>
+<div class="col-md-10" style="padding:5px;">
+<div style="padding:5px;"><a href="<?php echo $this->url('blog',
+             array('action'=>'poem', 'id' => $blogs->id));?>">奉和圣制从蓬莱向兴庆阁道中留春雨中春望之作应制</a></div>
+<div style="padding:5px;">作者：李白 8.0(15人评分)</div>
+<div style="padding:5px;">渭水自萦秦塞曲，黄山旧绕汉宫斜。銮舆迥出千门柳，阁道回看上苑花。云里帝城双凤阙，雨中春树万人家。为乘阳气行时令，不是宸游玩物华。...</div>
+</div>
+</div>-->
+<?php foreach ($poem as $poems) : ?>
+<div style="width:100%;float:left;border-bottom:dotted 1px grey;margin-bottom:10px;padding:10px;">
+<div class="col-md-2"><img src="<?php echo $this->basePath()?>/images/wangwei.jpg"></div>
+<div class="col-md-10" style="padding:5px;">
+<div style="padding:5px;"><a href="<?php echo $this->url('blog',
+             array('action'=>'poem', 'id' => $poems->poem_id));?>"><?php echo $this->escapeHtml($poems->title);?></a></div>
+<div style="padding:5px;">作者 <?php echo $this->escapeHtml($author->name);?>8.0(15人评分)</div>
+<div style="padding:5px;"><?php echo $this->escapeHtml($poems->content);?></div>
+</div>
+</div>
+ <?php endforeach; ?>
+ 
+<!-- end of display latest update -->
+</div>
+<!-- end of left block -->
+<div class="col-md-4" style="height:600px;padding:10px;">
+<div style="font-weight: bold;padding:10px;border-bottom:solid 1px black;">
+<span>古诗分类</span>
+</div>
+</div>
+</div>
+</div>

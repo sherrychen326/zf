@@ -1,0 +1,32 @@
+<strong>Module:</strong>        Blog &raquo;
+<strong>Controller:</strong>    Blog &raquo;
+<strong>Action:</strong>        index
+<?php 
+$title = 'My blogs';
+$this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+ <p>
+     <a href="<?php echo $this->url('blog', array('action'=>'add'));?>">Add new blog</a>
+ </p>
+
+ <table class="table">
+ <tr>
+     <th>Title</th>
+     <th>Artist</th>
+     <th>&nbsp;</th>
+ </tr>
+<?php foreach ($blog as $blogs) : ?>
+ <tr>
+     <td><?php echo $this->escapeHtml($blogs->title);?></td>
+     <td><?php echo $this->escapeHtml($blogs->artist);?></td>
+     <td>
+         <a href="<?php echo $this->url('blog',
+             array('action'=>'edit', 'id' => $blogs->id));?>">Edit</a>
+         <a href="<?php echo $this->url('blog',
+             array('action'=>'delete', 'id' => $blogs->id));?>">Delete</a>
+     </td>
+ </tr>
+ <?php endforeach; ?>
+ </table>
+ 

@@ -1,0 +1,89 @@
+<!--<div style="background-color:#CCC;">
+                        <ul class="container" style="padding:10px;list-style-type:none;margin-bottom:0px;background-color:#CCC;postion:absolute;">
+                           <?php foreach ($blog as $blogs) : ?>
+                           <li style="color:grey;margin-right:10px;position:relative;float:left;"><?php echo $this->escapeHtml($blogs->artist);?></li>
+                           <?php endforeach; ?>
+                        </ul>
+                    </div>--->
+ <div style="background-color: #f3f3f3;">            
+<div class="container">
+<!-- content -->
+<div class="col-md-9">
+<div style="padding:10px;">
+<h2><span>题目</span></h2>
+</div>
+
+<div style="margin-bottom:120px;">
+<div class="col-md-9">
+<div><span>朝代：</span></div>
+<div><span>作者:<a href="<?php echo $this->url('blog',
+             array('action'=>'shiren', 'id' => $blogs->poem_id));?>">杜牧</a></span></div>
+<div><span>原文：</span></div>
+<div><span>两竿落日溪桥上，半缕轻烟柳影中。</span></div>
+<div><span>多少绿荷相倚恨，一时回首背西风。</span></div>
+</div>
+
+<div class="col-md-3">
+<div><span>(11人评分) 7.5</span></div>
+<input id="input-1" type="hidden" class="rating" value="5" readonly="readonly" data-size="xsm" data-glyphicon="false" data-show-clear="false" data-show-caption="false">
+<input id="input-2" class="rating" value="4" readonly="readonly" data-size="xsm" data-glyphicon="false" data-show-clear="false" data-show-caption="false">
+<input id="input-3" class="rating" value="3" readonly="readonly" data-size="xsm" data-glyphicon="false" data-show-clear="false" data-show-caption="false">
+<input id="input-4" class="rating" value="2" readonly="readonly" data-size="xsm" data-glyphicon="false" data-show-clear="false" data-show-caption="false">
+<input id="input-5" class="rating" value="1" readonly="readonly" data-size="xsm" data-glyphicon="false" data-show-clear="false" data-show-caption="false">
+</div>
+</div>
+
+<div style="margin-bottom: 20px;padding:10px;">
+<script>
+
+</script>
+<span>评分</span><input id="input-2a" class="rating" data-min="0" data-max="5" data-step="0.1" data-stars=5 
+    data-size="xsm" data-glyphicon="false" data-show-clear="false" data-show-caption="true">
+</div>
+
+
+<div>
+<div style="font-weight: bold;padding:10px;border-bottom:dotted 1px grey;">
+<span style="background-color:blue;color:white;">相关翻译</span>
+</div>
+<div style="padding:10px;border-bottom:dotted 1px grey;">
+<div style="margin-bottom: 10px;"><span>译文</span></div>
+<div>
+<span>站在溪桥远眺，落日西斜，距地两竿，对岸杨柳含烟，淡影朦胧。水面上，荷叶亭亭、相簇相拥，一阵西风吹过，满溪荷叶随风翻转，似含无限愁情。...</span>
+</div>
+</div>
+</div>
+
+<div>
+<div style="font-weight: bold;padding:10px;border-bottom:dotted 1px grey;margin-top:20px;">
+<span style="background-color:blue;color:white;">相关赏析</span>
+</div>
+<div style="padding:10px;border-bottom:dotted 1px grey;">
+<div style="margin-bottom: 10px;"><span>鉴赏</span></div>
+<div>
+<span>
+首句“两竿落日溪桥上”，点明时间和地点。时间是“两竿落日”，则既非在红日高照之下，也非在暮色苍茫之中。在读者眼前展开的这幅画中的光线和亮度是柔和宜目的。地点是“溪桥上”，则说明诗人行吟之际，既非漫步岸边，也非泛舟溪面，这为后三句远眺岸上柳影、俯视水上绿荷定了方位。诗的次句“半缕轻...
+</span>
+</div>
+</div>
+</div>
+
+
+<div>
+<div style="font-weight: bold;padding:10px;border-bottom:dotted 1px grey;margin-top:20px;">
+<span style="background-color:blue;color:white;">作者介绍</span>
+</div>
+<div style="padding:10px;border-bottom:dotted 1px grey;">
+<div style="margin-bottom: 10px;"><span>王维</span></div>
+<div>
+<div><img src="<?php echo $this->basePath()?>/images/wangwei.jpg"></div>
+<div style="margin-top: 10px;"><span>
+杜牧（公元803－约852年），字牧之，号樊川居士，汉族，京兆万年（今陕西西安）人，唐代诗人。杜牧人称“小杜”，以别于杜甫。与李商隐并称“小李杜”。因晚年居长安南樊川别墅，故后世称“杜樊川”，著有《樊川文集》。...
+</span></div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
